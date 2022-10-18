@@ -1,0 +1,80 @@
+header {
+  position: relative;
+}
+.user > i {
+  color: var(--blue);
+}
+button.user {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.user:after{
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom:10px solid lightgray;
+
+    bottom: 0;
+    right: -2px;
+    display: var(--popup-open);
+}
+
+.settings > i, .user > i{
+  margin-left: 0.25rem;
+  transition: 1.0s ease all;
+  cursor: pointer;
+}
+.settings > i:hover, .user > i:hover {
+  color: var(--blue);
+}
+.settings > i.rotate {
+  color: var(--blue);
+  transform               : rotate(180deg);
+  -moz-transform          : rotate(180deg);
+  -webkit-transform       : rotate(180deg);
+  transform-origin        : center;
+  -moz-transform-origin   : center;
+  -webkit-transform-origin: center;
+
+  transition              : transform 1.0s ease all;
+  -moz-transition         : -moz-transform 1.0s ease all;
+  -webkit-transition      : -webkit-transform 1.0s ease all;
+}
+
+.user__popup {
+  position: absolute;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 0 5px lightgray;
+  border-radius: 0.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30vw;
+  max-width: 90vw;
+  min-height: 30vh;
+  max-height: 75vh;
+}
+
+.user__popup .icon {
+  position: absolute; 
+  right: 0; top: 0; 
+  margin: 1rem; 
+  font-size: 0.75rem; 
+  color: lightgray;
+}
+
+@media only screen and (max-width: 600px) {
+  .user__popup {
+    width: 80vw;
+  }
+
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta property=’og:title’ content='Minify URL'/>
+  <meta property=’og:image’ content='./images/minify-url-illustration.png'/>
+  <meta property=’og:description’ content='Minfies the URLs'/>
+  <meta property=’og:url’ content='https://cosmic-mousse-a2ba2f.netlify.app/'/>
+  <meta property='og:image:width' content='1200' />
+  <meta property='og:image:height' content='627' />
+  <!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+  <meta property="og:type" content='website'/>
+  <title>Minify url</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <header>
+    <h1 class="heading">Minify url<span>.</span>
+      <!-- <button class="user" onclick="toggleUserPopup()">
+        <span class="settings d-none" id="settings"><i class="fa-solid fa-gear" id="settingsIcon"></i></span>
+        <i class="fa-regular fa-user" id="userIcon"></i>
+      </button> -->
+    </h1>
+    <!--  d-none -->
+    <div class="user__popup d-none" id="userPopup">
+      <div class="user__login" id="loginPopup">
+        <i class="fa-solid fa-door-open icon"></i>
+        <form class="login__form" onsubmit="return false">
+          <ul class="social__media">
+            <li class="facebook">
+              <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="twitter">
+              <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="google">
+              <a href="#">
+                <i class="fa-brands fa-google"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="or__divider">or use your email address</p>
+          <div class="login__form__input">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="text" placeholder="Username" name="uname" required="required"/>
+          </div>
+          <div class="login__form__input">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" placeholder="Password" name="psw" required="required"/>
+          </div>
+          <div class="login__form__links">
+            <a class="login__form__link" href="#">Sign up</a>
+            <a class="login__form__link" href="#">Forgot password?</a>
+          </div>
+          <input class="login__form__submit__btn" type="submit" value="Login" onclick="login(event)" />
+        </form>
+      </div>
+      <div class="user__settings d-none" id="settingsPopup">
+          <i class="fa-solid fa-clock-rotate-left icon"></i>
+          <table>
+            <tr class="table__header">
+              <th class="status">Status</th>
+              <th class="link">Minified URL</th>
+              <th>Created Date</th>
+              <th>Expiry Date</th>
+            </tr>
+            
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td >12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>16 October 2022</td>
+              <td>11 October 2022</td>
+            </tr class="data">
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>6 October 2022</td>
+              <td>11 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td >12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>16 October 2022</td>
+              <td>11 October 2022</td>
+            </tr class="data">
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>6 October 2022</td>
+              <td>11 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td >12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>16 October 2022</td>
+              <td>11 October 2022</td>
+            </tr class="data">
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>6 October 2022</td>
+              <td>11 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td >12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>16 October 2022</td>
+              <td>11 October 2022</td>
+            </tr class="data">
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>6 October 2022</td>
+              <td>11 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td >12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>16 October 2022</td>
+              <td>11 October 2022</td>
+            </tr class="data">
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>6 October 2022</td>
+              <td>11 October 2022</td>
+            </tr>
+          </table>
+      </div>
+    </div>
+  </header>
+  <main>
+    <p class="title">Paste the URL to <span>shorten!</span></p>
+    <form class="notify__form">
+      <p class="minified__url o" id="minifiedUrlParent">
+        <span>Minified Url:&nbsp;</span><a href="#" id="minifiedUrl" target="_blank"></a>
+        <i class="fa-regular fa-copy" id="copyLink" onclick="copyUrl('minifiedUrl')"></i>
+        <i class="fa-solid fa-check" id="copiedIcon"></i>
+        <span class="copied__ack" id="copied">Copied!</span>
+      </p>
+      <input class="input__box a" id="urlInput" type="Url" name="url" placeholder="Enter the url..." oninput="validateUrl(event)">
+      <button class="submit__button b" type="submit" onclick="shortenUrl()"><i class="fa-solid fa-minimize"></i></button>
+      <p class="error__message c" id="errorMessage">&nbsp;</p>
+    </form>
+    <img class="demo__img" src="./images/minify-url-illustration.png" alt="minify-url-illustration">
+  </main>
+  <footer>
+    <ul class="social__media">
+      <li><a href="https://github.com/ravitejalakkoju/url-shortener" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+    </ul>
+    <p class="copyright">&copy; Copyright Minify URL. All rights reserved.</p>
+  </footer>
+  <script src="./scripts/script.js"></script>
+  <script src="https://kit.fontawesome.com/862bd05429.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
